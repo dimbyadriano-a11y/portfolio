@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEL DESIGN | Portfolio</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--accent);
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        header .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* Intro Box */
+        .intro-box {
+            background: linear-gradient(135deg, var(--card-bg), #131e31);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--accent);
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .intro-box p {
+            font-size: 1.15rem;
+            color: var(--text-main);
+        }
+
+        /* Sections Shared */
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        /* Approach section */
+        .approach p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        /* Services & Tech Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.8rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.1);
+        }
+
+        .card i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Badges / Tech Stack */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        /* CTA Section */
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b, var(--bg-color));
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .cta p {
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--bg-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(56, 189, 248, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            body {
+                padding: 1rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Hero Header -->
+        <header>
+            <h1>BEL DESIGN</h1>
+            <div class="subtitle">L’art de traduire votre vision en identité visuelle</div>
+        </header>
+
+        <!-- Accroche Principale (394 car.) -->
+        <div class="intro-box">
+            <p>BEL DESIGN, c'est l'histoire d'un graphiste au parcours sociologique qui met son cœur à comprendre vos
+                idées. Grâce à une analyse fine de votre imagination, je façonne pour vous des identités visuelles
+                uniques et sur-mesure. Ici, l'écoute humaine rencontre la stratégie créative pour capter l'essence de
+                votre projet et donner vie à des designs modernes, percutants et porteurs de sens.</p>
+        </div>
+
+        <!-- Mon Approche -->
+        <section class="approach">
+            <h2>Mon Approche</h2>
+            <p>Mon parcours universitaire en sociologie change radicalement ma manière de concevoir le design. Je ne me
+                limite pas à assembler des formes et des couleurs ; j’analyse en profondeur vos cibles professionnelles,
+                j’étudie les comportements de vos utilisateurs et je traduis vos valeurs fondamentales.</p>
+            <p>En associant cette fine sensibilité humaine à une solide rigueur technique, je donne vie à des projets
+                digitaux parfaitement cohérents et optimisés.</p>
+        </section>
+
+        <!-- Services -->
+        <section>
+            <h2>Mes Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fa-solid fa-palette"></i>
+                    <h3>Identité Visuelle</h3>
+                    <p>Création de logos originaux, de chartes graphiques complètes et d'univers de marque mémorables et
+                        percutants.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Web Design</h3>
+                    <p>Conception d'interfaces web fluides, esthétiques et intuitives, entièrement pensées pour
+                        l'expérience utilisateur (UX/UI).</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <h3>Communication</h3>
+                    <p>Design de supports marketing print et digitaux (visuels réseaux sociaux, plaquettes commerciales,
+                        présentations).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences Techniques (Nouveau !) -->
+        <section>
+            <h2>Compétences & Outils</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <h3>Design & Création</h3>
+                    <p>Maîtrise de la suite créative pour la conception graphique et le prototypage d'interfaces.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Illustrator</span>
+                        <span class="tag">Photoshop</span>
+                        <span class="tag">Figma</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Développement Web</h3>
+                    <p>Développement front-end propre, moderne, adaptatif et respectueux des standards du web.</p>
+                    <div class="tech-tags">
+                        <span class="tag">HTML5 / CSS3</span>
+                        <span class="tag">Bootstrap</span>
+                        <span class="tag">PHP (POO)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appel à l'action -->
+        <section class="cta">
+            <h2>Prêt à donner vie à vos projets ?</h2>
+            <p>Chaque marque possède une histoire unique qui mérite d'être racontée avec justesse. Collaborons ensemble
+                pour transformer vos concepts en expériences visuelles uniques.</p>
+            <div class="btn-group">
+                <a href="#projets" class="btn btn-primary">Découvrir mes projets</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
